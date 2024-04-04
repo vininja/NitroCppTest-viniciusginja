@@ -1,15 +1,15 @@
 # NitroCppTest-viniciusginja
 
-(Windows) Build and run steps :
+Instalation:
 
-1. Open `sourcecode\thirdparty\googletest-1.14.0\CMakeLists.txt` with VSCode.
-2. Hit `CTRL+S` to generate the project then build.
-3: Edit absolute paths in `unit_tests.cpp` for your system.
-4. Open `CMakeLists.txt` with VSCode.
-5. Hit `CTRL+S` to generate the project then build.
-6. Run the command-line app:
+1. Clone this git repository.
+2. Install VScode with the CMake Tools extension.
+3. Open the root folder `NitroCppTest-viniciusginja` in VSCode.
+4. Open `CMakeLists.txt`, hit `CTRL+S` to generate the project, select a kit and hit build.
+5. Edit the absolute paths in `unit_tests.cpp` for your build and system and then rebuild.
+6. (Windows) Open cmd.exe and run:
 ```cmd
-C:\git\NitroCppTest-viniciusginja\out\build\x64-Release\RelWithDebInfo\NitroCppTest.exe C:\git\NitroCppTest-viniciusginja\input\example1.json
+C:\git\NitroCppTest-viniciusginja\build\RelWithDebInfo\NitroCppTest.exe C:\git\NitroCppTest-viniciusginja\input\input1.json
 ```
-7. Run unit tests with `NitroCppTest_tests.sln`.
+7. (Windows) Run unit tests with `NitroCppTest_tests.exe`.
 
