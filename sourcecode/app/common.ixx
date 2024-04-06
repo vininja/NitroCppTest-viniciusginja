@@ -60,12 +60,11 @@ public:
                 all_rectids.insert(other.rectids.begin(), other.rectids.end());
             }
 
-            // Ensure that rectids is updated properly
             if (all_rectids.empty()) {
                 return Rectangle(x1, y1, x2 - x1, y2 - y1, 0); // No intersection, empty rectids
             }
             else {
-                return Rectangle(x1, y1, x2 - x1, y2 - y1, -1, all_rectids); // Pass the temporary set
+                return Rectangle(x1, y1, x2 - x1, y2 - y1, -1, all_rectids); 
             }
         }
         else {

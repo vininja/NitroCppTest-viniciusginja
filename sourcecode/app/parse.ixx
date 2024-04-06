@@ -40,12 +40,9 @@ export int inputParser(int argc, char* argv[], vector<Rectangle>& rectsArrayOut)
     }
 
     const Value& rectsArray = doc["rects"];
-    int idx = 1;
     for (SizeType i = 0 ; i < rectsArray.Size(); ++i) {
         const Value& rect = rectsArray[i];
-        Rectangle r = Rectangle(rect["x"].GetInt(), rect["y"].GetInt(), rect["w"].GetInt(), rect["h"].GetInt(), idx);
-        idx++;
-        rectsArrayOut.push_back(r);
+        rectsArrayOut.emplace_back(rect["x"].GetInt(), rect["y"].GetInt(), rect["w"].GetInt(), rect["h"].GetInt(), i+1);
     }
 
     return 0;
